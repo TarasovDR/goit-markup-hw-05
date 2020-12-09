@@ -4,7 +4,7 @@
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
   --secondary-bg-color: rgb(47, 48, 58);
-  --secondary-bg-color-opas: rgbf(47, 48, 58, 0.8);
+  --secondary-bg-color-opas: rgba(47, 48, 58, 0.8);
   --third-bg-color: #f5f4fa;
   --icon-color: #afb1b8;
 }
@@ -301,11 +301,10 @@ footer {
 
 .work-list-item-desc {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   left: 0;
   bottom: 0;
+  padding: 27px 82px;
+  text-align: center;
   width: 100%;
   height: 70px;
   background-color: var(--secondary-bg-color-opas);
@@ -489,6 +488,11 @@ address {
   top: 0;
   left: 0;
   padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.555;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
 
   opacity: 0;
   transition: 250ms opacity linear;
@@ -499,15 +503,6 @@ address {
 .card:hover .card-img-overlay-desc,
 .card:focus .card-img-overlay-desc {
   opacity: 1;
-}
-
-.card-img-overlay-desc {
-  font-size: 18px;
-  line-height: 1.555;
-  font-weight: 400;
-  letter-spacing: 0.03em;
-  color: var(--primary-bg-color);
-  opacity: 0;
 }
 
 .card-content {
