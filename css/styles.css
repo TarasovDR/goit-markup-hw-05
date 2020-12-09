@@ -3,7 +3,8 @@
   --secondary-text-color: #757575;
   --accent-color: #2196f3;
   --primary-bg-color: #ffffff;
-  --secondary-bg-color: #2f303a;
+  --secondary-bg-color: rgb(47, 48, 58);
+  --secondary-bg-color-opas: rgbf(47, 48, 58, 0.8);
   --third-bg-color: #f5f4fa;
   --icon-color: #afb1b8;
 }
@@ -294,6 +295,28 @@ footer {
   margin-right: 30px;
 }
 
+.work-list-item-wrap {
+  position: relative;
+}
+
+.work-list-item-desc {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: var(--secondary-bg-color-opas);
+  color: var(--primary-bg-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .team {
   background-color: var(--third-bg-color);
 }
@@ -438,7 +461,6 @@ address {
 
 .card-link:hover,
 .card-link:focus {
-  outline: none;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -451,16 +473,22 @@ address {
   display: inline-block;
   position: absolute;
   content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+
+  opacity: 0;
+}
+
+.card-img:hover::before {
+  opacity: 1;
 }
 
 .card-img-overlay {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
   padding: 63px 24px;
-  background-color: rgba(33, 150, 243, 0.9);
 
   opacity: 0;
   transition: 250ms opacity linear;
