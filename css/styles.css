@@ -310,9 +310,6 @@ footer {
   background-color: var(--secondary-bg-color-opas);
   color: var(--primary-bg-color);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -498,10 +495,10 @@ address {
   transition: 250ms opacity linear;
 }
 
-.card:hover .card-img-overlay,
-.card:focus .card-img-overlay,
-.card:hover .card-img-overlay-desc,
-.card:focus .card-img-overlay-desc {
+.card-img:hover .card-img-overlay,
+.card-img:focus .card-img-overlay,
+.card-img:hover .card-img-overlay-desc,
+.card-img:focus .card-img-overlay-desc {
   opacity: 1;
 }
 
