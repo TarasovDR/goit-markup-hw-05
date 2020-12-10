@@ -80,7 +80,7 @@ body {
   width: 100%;
   background-color: var(--primary-bg-color);
 
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .header::before {
@@ -111,8 +111,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  /* line-height: 1.1923; */
-  line-height: 1.1923em;
+  line-height: 1.1923;
 }
 
 .site-nav,
@@ -130,6 +129,7 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .site-nav .current {
@@ -589,18 +589,38 @@ address {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  /* z-index: 1; */
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   min-width: 528px;
   min-height: 581px;
-  transform: translate(-50%, -50%);
+  padding: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 
   border-radius: 4px;
   background: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  /* z-index: 2; */
+}
+
+.btn-modal {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  outline: none;
+  background-color: transparent;
+
+  cursor: pointer;
 }
