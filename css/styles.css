@@ -125,7 +125,8 @@ body {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
-  /* transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .current {
@@ -149,6 +150,8 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--secondary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-icon {
@@ -191,6 +194,9 @@ a,
 .btn-filter {
   text-decoration: none;
   color: var(--primary-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section.hero {
@@ -217,6 +223,8 @@ footer {
 .logo-footer,
 .auth-nav-footer .address {
   color: var(--primary-bg-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-title {
@@ -397,6 +405,9 @@ footer {
   height: 44px;
   border-radius: 50%;
   color: var(--icon-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -427,6 +438,9 @@ footer {
   border-radius: 4px;
   border: 1px solid var(--icon-color);
   color: var(--icon-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link:hover,
@@ -462,6 +476,8 @@ address {
 .footer-social-link {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--primary-bg-color);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-icon {
@@ -508,10 +524,8 @@ address {
 
   opacity: 0;
   transform: translateY(100%);
-  /* transition: transform 250ms linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-delay: 0;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-overlay {
@@ -527,12 +541,14 @@ address {
 
   opacity: 0;
   transform: translateY(100%);
-  transition: 250ms transform linear;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover .card-overlay,
-.card:hover .card-img::before {
+.card a:focus .card-overlay,
+.card:hover .card-img::before,
+.card a:focus .card-img::before {
   opacity: 1;
   transform: translateY(0);
 }
