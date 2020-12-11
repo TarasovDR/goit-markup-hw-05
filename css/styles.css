@@ -39,7 +39,6 @@ img {
 }
 
 body {
-  padding-top: 80px;
   background-color: var(--primary-bg-color);
   color: var(--primary-text-color);
   font-family: "Roboto", sans-serif;
@@ -74,13 +73,10 @@ body {
 }
 
 .header {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--primary-bg-color);
-
-  z-index: 1;
 }
 
 .header::before {
@@ -593,7 +589,6 @@ address {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* z-index: 1; */
 }
 
 .modal {
@@ -612,11 +607,10 @@ address {
   background: var(--primary-bg-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  /* z-index: 2; */
 }
 
 .btn-modal {
-  display: block;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   width: 30px;
