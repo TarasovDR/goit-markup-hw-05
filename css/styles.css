@@ -525,7 +525,7 @@ address {
 .card a {
   display: block;
 
-  transition-property: box-shadow;
+  transition-property: box-shadow, transform, opacity;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
@@ -639,11 +639,11 @@ address {
   transition-timing-function: var(--timing-function);
 }
 
-/* .backdrop.is-hidden {
-  transition-property: opacity;
+.backdrop.is-hidden {
+  transition-property: transform, opacity, visibility;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
-} */
+}
 
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -200%);
@@ -656,7 +656,7 @@ address {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -10%);
+  transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
 
@@ -666,9 +666,9 @@ address {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
   z-index: 2;
-  /* transition-property: transform, opacity;
+  transition-property: transform, opacity, visibility;
   transition-duration: 250ms;
-  transition-timing-function: var(--timing-function); */
+  transition-timing-function: var(--timing-function);
 }
 
 .btn-close {
